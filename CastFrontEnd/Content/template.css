@@ -1,0 +1,186 @@
+﻿body {
+    background: rgb(255, 255, 255);
+    margin: auto;
+}
+
+#container {
+    background: rgb(241, 220, 220);
+    margin: auto;
+    position: relative;
+    text-align: center;
+    width: 1000px;
+}
+
+.header {
+    background: rgb(203, 145, 145);
+    height: 100px;
+    margin: auto;
+   
+    position: relative;
+    width: 960px;
+}
+
+#container .header #logo {
+    color: rgb(255, 0, 0);
+    float: left;
+    font-family: Andy;
+    font-size: 50px;
+    margin: auto;
+    padding-top: 13px;
+    position: relative;
+    text-shadow: 2px 2px 2px;
+    width: 300px;
+    width: 300px;
+}
+
+.header #logo:hover { opacity: 0.5; }
+
+.header .nav a {
+    color: rgb(182, 5, 0);
+    float: right;
+    font-family: 'Browallia New';
+    font-size: 32px;
+    margin: auto;
+    margin-right: 10px;
+    padding-right: 20px;
+    padding-top: 55px;
+    position: relative;
+    text-align: center;
+    text-decoration: underline;
+    width: 50px;
+}
+
+.header .nav a:hover { opacity: 0.5; }
+
+.divider {
+    background-image: url(divider.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 23px;
+   
+    margin: auto;
+    position: relative;
+    width: 960px;
+}
+
+.container {
+    background: rgb(175, 171, 232);
+    margin: auto;
+   
+    
+    width: 960px;
+}
+
+.container #player {
+        
+    background: rgb(175, 171, 232);
+    float: left;
+    max-width: 600px;
+    position: relative;
+    width: 600px;       
+}
+
+.container #playerbox {
+    padding-bottom: 100px;
+    padding-top: 200px;
+}
+
+.container #rightPane {
+        
+    float: left;
+    position: relative;
+    width: 360px;
+}
+
+#rightPane span {
+    color: #5e4343;
+    font-family: Andy;
+    font-size: 25px;
+    padding-bottom: 5px;
+    position: relative;
+    text-align: center;
+}
+
+#rightPane #broadcastlist { padding-top: 5px; }
+
+#rightPane #broadcastlist hr { width: 360px; }
+
+.container #broadcastlist a {
+       
+      
+    background: rgb(255, 0, 0);
+    font-style: normal;
+    text-decoration: none;
+}
+
+.container #broadcastlist a:hover { color: black; }
+
+.listitem {
+    height: 40px;
+    position: relative;
+    text-align: center;
+    width: 360px;
+}
+
+#broadcastlist .listitem span {
+    float: right;
+    font-size: 25px;
+    margin: auto;
+    padding: 5px;
+    position: relative;
+    position: relative;
+    text-align: right;
+    vertical-align: central;       
+}
+
+.recorderpopup {
+    -moz-border-radius: 3px; /* Firefox */
+    -moz-box-shadow: 0px 0px 20px #999; /* Firefox */
+    -webkit-border-radius: 3px; /* Safari, Chrome */
+    -webkit-box-shadow: 0px 0px 20px #999; /* Safari, Chrome */
+    background: #333;
+    border: 2px solid #ddd;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0px 0px 20px #999;
+    /* CSS3 */
+    display: none;
+    float: left;
+    font-size: 1.2em;
+    left: 50%;
+    padding: 10px;
+    position: fixed;
+    top: 50%;
+    z-index: 99999;
+}
+
+#microphone {
+    background-image: url(microphone.png);
+    background-position: center;
+    height: 200px;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    width: 99px;
+}
+
+#mask {
+    background: #000;
+    display: none;
+    height: 100%;
+    left: 0;
+    opacity: 0.8;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    z-index: 999;
+}
+
+listitem a p {
+        
+    float: right;
+    font-size: 50px;
+    padding-bottom: 5px;
+    position: relative;
+    vertical-align: text-bottom;
+}

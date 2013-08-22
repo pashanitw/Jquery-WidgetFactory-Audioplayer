@@ -1,0 +1,107 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>template</title>
+        <script type="text/javascript" src="~/Scripts/jquery-1.7.1.js"> </script>
+        <script type="text/javascript" src="~/Scripts/jquery-1.7.1.min.js"> </script>
+        <script type="text/javascript" src="~/Scripts/jquery-ui-1.8.20.js"> </script>
+        <script type="text/javascript" src="~/Scripts/jquery-ui-1.8.20.min.js"> </script>
+
+        <script type="text/javascript"src="~/Scripts/widgets/cast.event.js"> </script>
+        <script type="text/javascript" src="~/Scripts/widgets/cast.pubsub.js"> </script>
+        <script type="text/ecmascript" src="~/Scripts/widgets/cast.status.js"></script>
+        <script type="text/javascript" src="~/Scripts/widgets/cast.testbutton.js"> </script>
+        <script type="text/javascript" src="~/Scripts/jquery.templ.min.js"> </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js" type="text/javascript"> </script>
+  
+       
+        <script type="text/javascript">
+
+            $(function(cast) {
+                cast.rootUrl = '@Url.Content("~")';
+
+            }(this.cast = this.cast || {}));
+
+            function play() {
+                var player = document.getElementById("audioplayer");
+                player.load();
+                player.play();
+                player.empty();
+                //  player.oncanplay
+                console.log("source is" + player.src);
+                // player.src="Url.Content('~/Content/music/1.mp3')";
+                var urlname = "~/Content/music/1.mp3";
+            }
+
+        </script>
+        @Styles.Render("~/Content/template.css");
+    </head>
+    <body>
+        <div id="container">
+   
+            <div class="header">
+
+                <div id="logo">
+                    CastGraphy
+                </div>
+                <div class="nav" id="nav">
+                    <a href="">Signout</a>
+                    <a href="">Profile</a>
+                    <a href="">home</a>
+                </div>
+            </div>
+
+            <div class="divider">
+            </div>
+            <div class="container">
+                <div id="player">
+                    <div id="playerbox">
+                        <div id="notification">
+                   
+                        </div>
+                        <div id="mylink">
+                            <a href="#" data-action="something selected" id="linker">something</a>
+                        </div> 
+                        <div id="recorder">
+                            @Html.Partial("_RecorderPopup");
+                            <div id="flash"></div>
+                        </div>
+                        <br />
+                        <br />
+                        <br />
+                        <div id="parentAudio">
+                            <audio controls="controls" id="audioplayer" >
+                                <source id="mp3src" type="audio/mp3" />
+                            </audio>
+                        </div>
+                    </div>
+                
+                </div>
+                <div id="rightPane" >
+                    <span>Now Playing</span>
+                    <div id="broadcastlist" data-action-url="@Url.Action("GetMusic", "Home")">
+                
+                    </div>
+                </div>
+            </div>
+            <div>
+
+            </div>
+        </div>
+    
+   
+        @Html.Partial("_ListiItem")
+        <script src="~/Scripts/recorder.js" type="text/javascript"> </script>
+        <script type="text/javascript" src="~/Scripts/widgets/cast.recorder.js"> </script>
+        <script type="text/javascript" src="~/Scripts/widgets/cast.player.js"> </script>
+        <script type="text/javascript" src="~/Scripts/widgets/cast.broadcastlist.js"> </script>
+        <script type="text/javascript" src="~/Scripts/widgets/castgraphy.js"> </script>
+    </body>
+
+</html>
