@@ -57,7 +57,6 @@
         },
         _bindAudioUploadformSubmitButton:function()
         {
-            alert("in bind audio upload form submit button");
             var that = this;
             $('#uploadForm').submit(function () {
                 console.log("form submitted");
@@ -73,7 +72,7 @@
         
         
     ShowRequest:function(formData, jqForm, options) {
-        alert("before sending");
+  
     },
        
     AjaxError:function() {
